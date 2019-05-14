@@ -33,7 +33,7 @@
 		<tr height="50">
 			<td width=20%>phone：</td>
 			<td>18311770994</td>
-	"WebContent/information/information.jsp"		<td>phone：</td>
+			<td>phone：</td>
 			<td>19985702305</td>
 		</tr>
 		

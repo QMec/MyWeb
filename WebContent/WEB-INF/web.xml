@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+id="WebApp_ID" version="2.5">
+
   <display-name>MyWeb</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
+  
+  <welcome-file-list>  <!-- 所要设定的欢迎页面 从第一个轮询 -->
+   	<welcome-file></welcome-file>
+    <welcome-file>indsex.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+    <description></description>
+    <display-name>WelcomeServlet</display-name> 
+    <servlet-name>WelcomeServlet</servlet-name> <!-- 命名随意但两次必须同名 ，习惯用类名-->
+    <servlet-class>servlets.WelcomeServlet</servlet-class> 
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>WelcomeServlet</servlet-name> <!-- 命名随意但两次必须同名 ，习惯用类名 -->
+    <url-pattern>/abc/def</url-pattern> <!-- 路径随意，习惯用包路径 -->
+  </servlet-mapping>
+  
 </web-app>
+
+<!-- 以上配置表示，给servlets.WelcomeServlet 起名为 WelcomeServlet -->
